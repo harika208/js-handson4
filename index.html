@@ -1,0 +1,348 @@
+<b>
+    1. Find the Product.
+    Write a program that takes an array as input from the user and find out the product of the elements.
+    <br>
+    Note: You have to complete Find_Prod. No need to take any input.
+    <br>
+    Input Format <br>
+    The input contains a single number N, followed by N numbers as array elements. <br>
+    
+    Output Format    <br>
+    Return the required answer.
+    
+</b>
+
+<pre>
+    
+const Find_Prod = (array, N) => 
+{
+ 
+  const result = array.reduce((total,N)=> total * N)   
+   return result;
+};
+
+Input
+5
+1 2 3 4 5
+
+Output
+120
+</pre>
+
+<b>2. Find the Sum.  <br>
+    Write a program which takes an array as input from the user and find out the sum of the array elements.
+    <br>
+    Note: You have to complete Find_Sum. No need to take any input. <br>
+    
+    Input Format  <br>
+    The input contains a single number 
+    N
+    , followed by 
+    N
+     numbers as array elements.  <br>
+    
+    Output Format  <br>
+    Return the required answer.
+
+</b>
+
+<pre>
+    const Find_Sum = (array, N) => 
+{
+  
+const sum = array.reduce((total,N)=> total + N)
+return sum;
+};
+
+Input
+5
+1 2 3 4 5
+
+Output
+15
+</pre>
+
+<b>
+    3. Count Occurrences, You are given an array A containing N integer elements and an integer K, and your task is to return the count of occurrences of K in array A.
+    <br>
+    Note: You have to complete findCount function. No need to take any input.
+    <br>
+    Input Format <br>
+    The first line of the input contains two space-separated integers N and K, denoting the number of elements in the array A and the element whose count needs to be determined, respectively. The second line of the input contains N space-separated integers, denoting the elements of the array .
+    <br>
+    Output Format  <br>
+    Return the count of occurrences of K in array A.
+</b>
+<pre>
+    const findCount = (N, K, Arr) => 
+{
+  let count = 0;
+  for(let i=0; i< N; i++){
+    if(Arr[i] == K)
+    {
+      count = count + 1;
+    }
+  }
+  return count;
+};
+
+Input
+4 3
+3 3 1 2
+
+Output
+2
+</pre>
+
+<b>
+    4. Even Odd, You are given an array 
+    A containing N integer elements, and your task is to return an array B (having a size equal to +2), where B[0] contains the sum of all even elements of array A and B[1] has the sum of all odd elements of the array A.
+    <br>
+    Note: You have to complete findEvenOdd function. No need to take any input.
+    <br>
+    Input Format  <br>
+    The first line of the input contains an integer N, denoting the number of elements in the array A. The second line of the input contains N space-separated integers, denoting the elements of array A. 
+    <br>
+    Output Format <br>
+    Return array B as output.
+</b>
+<pre>
+    const findEvenOdd = (N, Arr) => 
+{
+   let B = [];
+   var a = Arr.filter((x)=>x%2 === 0)
+   var b=a.reduce((accu,cum)=>accu=accu+cum,0)
+   B.push(b);
+   
+   var c= Arr.filter((x)=>x%2!==0)
+   var d=c.reduce((accu,cum)=>accu=accu+cum,0)
+   B.push(d);
+   return B;
+};
+
+Input
+7
+1 2 3 4 5 6 7
+
+Output
+12 16
+</pre>
+
+<b>
+  5.  Find whether the number is present or not,
+Write a program which takes an array as input from the user and a number.
+Check whether the number is present or not.
+<br>
+Note: You have to complete Find_Num. No need to take any input.
+<br>
+Input Format  <br>
+The first line contains an integer N, denoting the size of the array. The second line contains N space-separated integers, denoting the elements of the array. The third line contains an integer M, denoting the element that needs to be searched.
+<br>  
+Output Format  <br>
+Return the "YES" (without quotes) else return "NO" (without quotes).
+</b>
+
+<pre>
+    const Find_Num = (array,N,M) => 
+{
+  for(i=0; i < N; i++){
+    if(array[i] == M){
+      return "YES"
+    }
+  }  return "NO";
+};
+
+Input
+5
+1 2 3 4 5
+2
+
+Output
+YES
+</pre>
+
+<b>6. Higher Age, You are given an array A containing the age of persons in your locality, and your task is to find and return an array containing the age of persons that are over 18 (18 included).
+    <br>
+    Note: Also, in the output array, the age should be in the same order as in the input array. You have to complete highAge function. No need to take any input.
+    <br>
+    Input Format  <br>
+    The first line of the input contains an integer N, denoting the number of person in your locality. The second line of the input contains N space-separated integers, denoting the age of persons in your locality.
+    <br>
+    Output Format  <br>
+    Return the array containing the age of persons that are over 18 (18 included). 
+
+</b>
+
+<pre>
+    const highAge = (N, Arr) => 
+{
+    var b= Arr.filter((N)=> N >= 18);
+    return b;
+};
+
+Input
+6
+11 23 3 45 72 68
+
+Output
+23 45 72 68
+</pre>
+
+<b>7.  Increment the Array Elements, You are provided an array of integers and you have to increment all array elements by 1 and then print whole array.
+    <br>
+    You have to complete Inc_Arr. No need to take any input.
+    <br>
+    Input Format  <br>
+    The input contains a single number N, then N array elements as input.
+    <br>
+    Output Format  <br>
+    Print the required answer in the function itself.
+
+</b>
+
+<pre>
+    
+const Inc_Arr = (array,N) => 
+{
+  const result = array.map((N)=> N + 1);
+  console.log(...result);
+};
+
+Input
+5
+1 2 3 4 5
+
+Output
+2 3 4 5 6 
+</pre>
+
+<b>
+    8. Pass or Fail You are given an array A containing the maths marks of students in your class, and your task is to determine if all the students pass in your class or not. A student is declared pass if his maths marks are greater than or equal to 32. If all the students pass in your class, return "YES" (without quotes); otherwise, return "NO" (without quotes).
+    <br>
+    Note: You have to complete isAllPass function. No need to take any input.
+    <br>
+    Input Format  <br>
+    The first line of the input contains an integer N, denoting the number of students in your class. The second line of the input contains N space-separated integers, denoting the maths marks of students in your class.
+    <br>
+    Output Format  <br>
+    Return "YES" (without quotes) if all the students pass in your class; otherwise, print "NO" (without quotes).
+</b>
+
+<pre>
+    const isAllPass = (N, Arr) => 
+{
+  Arr.sort();
+  for(let i=0; i<=Arr.length; i++){
+    if(Arr[i] >= 32){
+      return "YES";
+    }
+    else{
+      return "NO"
+    }
+  }
+};
+
+Input
+7
+13 89 45 98 67 45 54
+
+Output
+NO
+</pre>
+
+<b>
+    9. Unique Color Shirt, Prepbuddy is very tasteful of clothes. He has N numbers of shirts hanging in the hanger in his wardrobe.
+    Prepbuddy likes to wear different colored clothes. So, whenever he see there are two or more shirts with the same color, he removes all the shirt of that color from his wardrobe. Now, he wants to know how many M unique color shirts are left in the wardrobe. Prepbuddy wants you to find M.
+    <br>
+    Note: As there are many shades of a color so consider integers as a color name.
+    i.e, color of shirt is 0,1,2, … , N.
+    <br>
+    Input Format  <br>
+    The first line of the input contains an integer N denoting the number of shirts in the wardrobe The second line of the input contains N integers C1,C2,C3,C4,...,CN color of shirts (separated by space).
+    <br>
+    Output Format  <br>
+    Return a single integer M denoting the unique colored shirts left in the wardrobe. 
+</b>
+
+<pre>
+    
+function Unique_Shirts (arr,N) {
+
+    unique=arr.filter((value)=>arr.indexOf(value) ===arr.lastIndexOf(value))
+    return (unique.length);
+     
+    }
+
+    Input
+6
+3 2 4 1 2 3
+
+Output
+2
+</pre>
+
+<b>
+    10. Min and Max, Congratulations on making up to this question. Let us give you a fairly simple array problem to solve. If you know how to iterate through the array, you will easily be able to solve this. The problem statement is simple- given N elements, find the minimum and maximum numbers among those elements.
+    <br>
+    Input format  <br>
+    First-line contains N representing the length of the array. The second line contains N space-separated integers.
+    <br> 
+    Output format  <br>
+    Return minimum and maximum elements.
+</b>
+
+<pre>
+    function arrayMin(arr) {
+        const result1 = Math.min(...arr)
+      return result1;
+      }
+      
+      function arrayMax(arr) {
+       const result2 = Math.max(...arr)
+      return result2;
+      }
+
+      Input
+      6
+      3 1 4 6 2 7
+
+      Output
+      1
+      7
+</pre>
+
+<b>
+    11. Birthday Game, Yatharth and Anamika are playing a game. Anamika loves Yatharth very much and she wants to share a chocolate bar with him in which each of the squares consists of an integer represented by A[i]. She decides to share a contiguous segment of the chocolate bar selected such that the length of the segment matches Yatharth's birth month M and the sum of the integers on the squares is equal to his birthday D. You must determine how many ways she can divide the chocolate.
+    <br>
+    Input Format  <br>
+    The first line consists of an integer N which denotes the number of squares in the chocolate bar. The second line consists of N space-separated integers A[i], consisting of numbers on the chocolate bar squares. The third line contains an integer D and  M which denotes Yatharth's birthday and his birth month respectively.     
+   <br>
+    Output Format  <br>
+    Print an integer denoting the total number of ways that Anamika can partition her chocolate bar to share with Yatharth.
+</b>
+
+<pre>
+     
+function Birthday_Game(arr,D ,M) {
+    let counter = 0;
+    for(let i=0; i< arr.length - 1; i++)
+    {
+      let subArray = arr.slice(i, i+M);
+      if(subArray.length === M){
+        let sum = subArray.reduce((a,b)=> a + b, 0);
+        if(sum === D){
+          counter += 1;
+        }
+      }
+    }
+   return counter;
+   }
+
+   Input
+   5
+   2 2 1 3 2
+   4 2
+
+   Output
+   2 
+</pre>
